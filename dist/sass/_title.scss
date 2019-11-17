@@ -1,0 +1,58 @@
+.title{
+    
+    grid-column: col-start 2 / col-end 7;
+    margin-bottom: 5rem;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    grid-template-rows: minmax(min-content, 1fr);
+
+    &__container{
+        padding: 8px 19px;
+        text-align: center;
+        background-color: #19153aa8;
+        color: #fff;
+        border: 1px solid $color-secondary;
+        box-shadow: 1px 1px 6px #695cd08c;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        // @media only screen and (max-width: $bp-ex-small){
+            
+        //     padding: 15px;
+        //     height:80px;
+               
+        //    }
+
+        h2{
+            letter-spacing: 1px;
+            font-size: 2.6rem;
+            padding: 0 42px;
+            text-transform: uppercase;
+            position: relative;
+            @media only screen and (max-width: $bp-ex-small){
+                font-size: 2.0rem;
+                  
+              }
+
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 14px;
+                background-color: #6E62D2;
+                width: 2px;
+                height: 100%;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 14px;
+                background-color: #6E62D2;
+                width: 2px;
+                height: 100%;
+            }
+        }
+    }
+}

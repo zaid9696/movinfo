@@ -1,0 +1,51 @@
+.video{
+    grid-column: col-start 2  / col-end 7;
+
+    display: grid;
+    justify-items: center;
+    margin-bottom: 6rem;
+    @media only screen and (max-width: $bp-ex-small){
+       margin-bottom: 3rem;
+      
+          
+      }
+
+    &__trailer{
+        border: 4px solid $color-secondary;
+        height: 98%;
+        box-shadow: 1px 1px 9px #695cd0;
+        width:70%;
+        height: 60vh;
+        opacity:0;
+        @media only screen and (max-width: $bp-ex-small){
+          height: 40vh;
+          width: 95%;
+            
+        }
+    }
+}
+
+.animatetrailer{
+  animation-name: moveInleft;
+      animation-duration: 1.0s;
+      animation-timing-function: ease-in;
+      opacity: 1;
+
+      // @keyframes moveInleft {
+
+      //     0%{
+      //         opacity: 0;
+      //         transform: translateX(100px);
+      //     }
+  
+      //     80%{
+      //         transform: translateX(50px);
+      //     }
+  
+  
+      //     100%{
+      //         opacity: 1;
+      //         transform: translateX(0);
+      //     }
+      // }
+}

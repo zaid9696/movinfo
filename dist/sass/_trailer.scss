@@ -1,0 +1,42 @@
+.trailer{
+    grid-column: full-start / full-end;
+    
+    text-align: center;
+   
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 4rem;
+    display: grid;
+    align-content: center;
+    
+
+    h2{
+        display: none;
+        padding: 7px 0;
+        font-size: 2.7rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        background-color: #19153aa8;
+        color: #fff;
+        border: 1px solid #6E62D2;
+        box-shadow: 1px 1px 6px #695cd08c;
+        &::after{
+            content: '';
+            position: absolute;
+            background-color: #6E62D2;
+            width: 5px;
+            height: 100%;
+            transform: rotate(90deg) translateY(-60px);
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            background-color: #6E62D2;
+            width: 5px;
+            height: 100%;
+            transform: rotate(90deg) translateY(60px);
+        }
+
+    }
+}

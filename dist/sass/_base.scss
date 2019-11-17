@@ -1,0 +1,86 @@
+
+$color-primary: #050531;
+$color-secondary: #6E62D2;
+$color-blue: #052061;
+$color-purple: #84358e;
+
+// Responsive BreakPoints
+
+$bp-largest: 1090px;
+$bp-large: 900px;
+$bp-medium: 800px;
+$bp-small: 690px;
+$bp-ex-small: 500px;
+
+
+
+
+*,
+*::before,
+*::after{
+    padding:0;
+    margin:0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px;
+
+    @media only screen and (max-width: $bp-largest){
+        font-size: 50%;
+    }
+}
+
+body{
+    line-height: 1.6;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    // background-image: linear-gradient(to right bottom, rgba($color-blue,0.8),rgba($color-purple,0.8)), url(../imgs/bg-2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    background-color: $color-purple;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 55vh repeat(5, min-content);
+    grid-template-columns: [full-start] 1fr [center-start] repeat(8,[col-start] minmax(min-content, 1100px) [col-end])[center-end] 1fr [full-end];
+    @media only screen and (max-width: $bp-medium){
+        grid-template-rows: 0vh repeat(5, min-content);
+    }
+    @media only screen and (max-width: $bp-largest){
+        grid-template-rows:365px repeat(5, minmax(min-content, 14vh));
+    }
+    
+    @media only screen and (max-width: $bp-ex-small){
+        grid-template-rows: 0vh repeat(5, minmax(min-content, 13vh));
+    }
+    @media only screen and (max-width: $bp-ex-small)and (min-height:670px) {
+        grid-template-rows: 0vh repeat(5, minmax(min-content, 17vh));
+    }
+    
+    
+}
+
+::selection{
+    background-color: #84358e;
+    color: azure;
+}
+
+.loader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #2f0740;
+    z-index: 3333;
+    display: flex;
+    justify-content: center;
+    img{
+        width: 455px
+    }
+}

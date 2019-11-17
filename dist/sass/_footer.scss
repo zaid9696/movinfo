@@ -1,0 +1,47 @@
+.footer{
+    background-color: #0b081d;
+    grid-column: full-start / full-end;
+    
+    align-content: end;
+    padding: 12px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items:center; 
+    color: #fff;
+    @media only screen and (max-width: $bp-ex-small){
+        align-self: end;
+        height: 75px;
+        align-content: center;
+          
+      }
+
+    &__movie-dp{
+        width: 40px;
+        margin-left: 6px;
+    }
+    &__copyright{
+        font-size: 1.4rem;
+        color: #bfbfbf;
+        p{
+
+            font-size: 1.4rem;
+            color: #bfbfbf;
+            span{
+                font-size: 1.7rem;
+                font-weight: bold;
+                color: #6e62d2;
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    &__powred{
+        display: grid;
+        justify-items: end;
+        align-items: center;
+        grid-auto-flow: column;
+        justify-content: end;
+        color: #bfbfbf;
+    font-size: 1.27rem
+    }
+}
